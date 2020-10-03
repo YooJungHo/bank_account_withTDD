@@ -26,10 +26,10 @@ class AccountTest {
 	//하나의 테스트가 하나의 기능을 테스트하도록 만드는 것이 기본 원칙.
 	//실패(질문) - 성공(응답) - 정제(리팩토링)
 
-//	@Test
-//	public void testAccount() throws Exception{
-//		account = new Account();
-//	}
+	@Test
+	public void testAccount() throws Exception{
+		account = new Account();
+	}
 	
 	@Test
 	public void testGetBalance() throws Exception{
@@ -43,19 +43,26 @@ class AccountTest {
 		account = new Account(0);
 		assertEquals(0, account.getBalance());
 	}
-//	
+	
 	@Test //입금하기
 	public void testDeposit() throws Exception{
-//		Account account = new Account(10000);
 		account.deposit(1000);
 		assertEquals(11000, account.getBalance());
 	}
 	
-	@Test //입금하기
+	@Test //출금하기
 	public void testwithdraw() throws Exception{
-//		Account account = new Account(10000);
+
 		account.withdraw(1000);
+		assertEquals(9000, account.getBalance());
+		
+		//minus로 입력 시 인출 불가 처리.
+		account.withdraw(-100);
+		assertEquals(9000, account.getBalance());
+		
+		account.withdraw(0);
 		assertEquals(9000, account.getBalance());
 	}
 
+	
 }
