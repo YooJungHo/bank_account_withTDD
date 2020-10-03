@@ -2,20 +2,24 @@ package model;
 
 public class Account {
 
-	private int balance;
+	private long balance;
 
 	public Account() {
 	}
 
-	public Account(int money) {
-		this.balance = money;
+	public Account(long money) {
+		if (money < 0) {
+			System.out.println("계좌생성 실패");
+		} else {
+			this.balance = money;
+		}
 	}
 
-	public int getBalance() {
+	public long getBalance() {
 		return this.balance;
 	}
 
-	public void deposit(int money) {
+	public void deposit(long money) {
 		this.balance += money;
 	}
 

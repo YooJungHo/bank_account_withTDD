@@ -37,6 +37,12 @@ class AccountTest {
 		assertEquals("10000원으로 계좌 생성 후 잔고 조회",10000, account.getBalance());
 		
 		//assertEquals()가 일치하지 않으면 fail()을 던짐.
+		account = new Account();
+		assertEquals(0, account.getBalance());
+		
+		account = new Account(-1000);
+		assertEquals(0, account.getBalance());
+		
 		account = new Account(1000);
 		assertEquals(1000, account.getBalance());
 		
@@ -46,7 +52,6 @@ class AccountTest {
 	
 	@Test //출금하기
 	public void testwithdraw() throws Exception{
-		Account account = new Account(10000);
 		account.withdraw(1000);
 		assertEquals(9000, account.getBalance());
 		
