@@ -5,7 +5,6 @@ public class Account {
 	private int balance;
 
 	public Account() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Account(int money) {
@@ -21,7 +20,15 @@ public class Account {
 	}
 
 	public void withdraw(int money) {
-			this.balance -= money;
+		if(money <= 0) {
+			System.out.println("0원 이하의 값을 입력할 수 업습니다");
+		}else {
+			if(this.balance > money) {
+				this.balance -= money;
+			}else {
+				System.out.println("한도 초과!!");
+			}
+		}
 	}
 
 }
