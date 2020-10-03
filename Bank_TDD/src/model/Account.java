@@ -27,7 +27,7 @@ public class Account {
 		}
 	}
 
-	public void withdraw(int money) {
+	public void withdraw(long money) {
 		if(money <= 0) {
 			System.out.println("0원 이하의 값을 입력할 수 업습니다");
 		}else {
