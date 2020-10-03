@@ -1,0 +1,19 @@
+package model;
+
+
+public class Account {
+
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Account(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getBalance() {
+		return 10000;
+	}
+	
+	
+}

@@ -1,0 +1,19 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AccountTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+		//실패(질문)
+		
+		//성공(응답)
+		
+		//정제(리팩토링)
+	}
+
+}

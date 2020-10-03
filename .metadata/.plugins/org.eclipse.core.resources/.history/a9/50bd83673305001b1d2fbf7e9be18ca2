@@ -1,0 +1,22 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+
+class AccountTest {
+	
+	//하나의 테스트가 하나의 기능을 테스트하도록 만드는 것이 기본 원칙.
+	//실패(질문) - 성공(응답) - 정제(리팩토링)
+
+	@Test
+	void test() {
+		Account account = new Account();
+//		Optional.ofNullable(null).get().or
+		if(account == null) throw new Exception("계좌 생성 실패")
+		
+	}
+
+}
