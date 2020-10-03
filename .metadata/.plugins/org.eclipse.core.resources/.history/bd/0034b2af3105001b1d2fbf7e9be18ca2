@@ -1,9 +1,0 @@
-package test;
-
-public class AccountTest {
-	//실패(질문)
-	
-	//성공(응답)
-	
-	//정제(리팩토링)
-}
