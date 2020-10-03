@@ -56,12 +56,6 @@ class AccountTest {
 		account.withdraw(1000);
 		assertEquals(9000, account.getBalance());
 		
-		//minus로 입력 시 인출 불가 처리.
-		account.withdraw(-100);
-		assertEquals(9000, account.getBalance());
-		
-		account.withdraw(0);
-		assertEquals(9000, account.getBalance());
 	}
 
 	
