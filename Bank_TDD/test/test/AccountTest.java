@@ -44,6 +44,18 @@ class AccountTest {
 		assertEquals(0, account.getBalance());
 	}
 	
+	@Test //입금하기
+	public void testdeposit() throws Exception{
+		account.deposit(1000);
+		assertEquals(11000, account.getBalance());
+		
+		//0원, minus
+		account.deposit(0);
+		account.deposit(-100);
+		
+	}
+	
+	
 	@Test //출금하기
 	public void testwithdraw() throws Exception{
 		Account account = new Account(10000);
@@ -56,4 +68,6 @@ class AccountTest {
 		//한도초과
 		account.withdraw(10001);
 	}
+	
+	
 }

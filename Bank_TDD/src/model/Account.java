@@ -16,7 +16,11 @@ public class Account {
 	}
 
 	public void deposit(int money) {
-		this.balance += money;
+		if(money <= 0) {
+			System.out.println("0원 이하의 값을 입력할 수 없습니다.");
+		}else {
+			this.balance += money;			
+		}
 	}
 
 	public void withdraw(int money) {
